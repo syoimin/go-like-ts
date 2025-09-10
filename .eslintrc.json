@@ -1,46 +1,12 @@
 {
-    "compilerOptions": {
-      // 最大限の型チェック
-      "strict": true,
-      "noImplicitAny": true,
-      "noImplicitReturns": true,
-      "noImplicitThis": true,
-      "noImplicitOverride": true,
-      "noUncheckedIndexedAccess": true,
-      "exactOptionalPropertyTypes": true,
-      
-      // Go言語風の明示性
-      "noImplicitUseStrict": false,
-      "alwaysStrict": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noFallthroughCasesInSwitch": true,
-      "noPropertyAccessFromIndexSignature": true,
-      
-      // 型の明示性を強化
-      "declaration": true,
-      "declarationMap": true,
-      
-      // モジュールシステム
-      "module": "ESNext",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "forceConsistentCasingInFileNames": true,
-      
-      // 出力設定
-      "target": "ES2022",
-      "lib": ["ES2022", "DOM"],
-      "outDir": "./dist",
-      "rootDir": "./src",
-      
-      // デバッグ情報
-      "sourceMap": true,
-      
-      // 実験的機能の無効化（Go言語の保守性重視）
-      "experimentalDecorators": false,
-      "emitDecoratorMetadata": false
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist", "**/*.test.ts"]
+  "extends": ["eslint:recommended", "@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "eqeqeq": ["error", "always"],
+    "no-var": "error",
+    "prefer-const": "error"
+  }
 }
